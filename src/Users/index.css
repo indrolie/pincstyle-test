@@ -1,0 +1,20 @@
+.container{
+    text-align: center
+}
+
+.card-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.ui.card{
+    width: 200px;
+    height: 200px;
+}
+
+.ui.pagination.menu{
+    margin-top: 50px;
+}

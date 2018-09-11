@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
+import { Tab } from 'semantic-ui-react'
+
+import MyModal from '../Modal'
+import MyLoginForm from '../Login'
+import ShowUsers from '../Users'
+
 import './index.css';
 
 class App extends Component {
   render() {
+    const panes = [
+      { menuItem: 'Test A', render: () => <Tab.Pane><MyModal /></Tab.Pane> },
+      { menuItem: 'Test B', render: () => <Tab.Pane><MyLoginForm /></Tab.Pane> },
+      { menuItem: 'Test C', render: () => <Tab.Pane><ShowUsers /></Tab.Pane> },
+    ]
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Tab panes={panes} />
     );
   }
 }

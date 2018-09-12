@@ -21,8 +21,6 @@ export default class ShowUsers extends React.Component {
         await this.setState({
             users: response.data.data
         })
-
-        console.log(this.state.users)
     }
 
     handlePaginationChange = async (e, { activePage }) => {
@@ -33,8 +31,6 @@ export default class ShowUsers extends React.Component {
         await this.setState({
             users: response.data.data
         })
-
-        console.log(this.state.users)
     }
 
     render() {

@@ -19,8 +19,6 @@ export default class MyModal extends React.Component {
         await this.setState({
             modals: this.state.modals
         })
-
-        console.log(this.state.modals)
     }
 
     addModal = async () => {
@@ -29,8 +27,6 @@ export default class MyModal extends React.Component {
         await this.setState({
             modals: this.state.modals
         })
-
-        await console.log(this.state.modals)
     }
 
     render() {

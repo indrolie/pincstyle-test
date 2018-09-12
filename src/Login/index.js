@@ -31,7 +31,6 @@ export default class MyLoginForm extends React.Component {
         }
 
         const response = await login(data)
-        console.log(response);
 
         if (response.request.status === 400) {
             this.setState({
@@ -42,7 +41,6 @@ export default class MyLoginForm extends React.Component {
                 message: 'Login successful!'
             })
         }
-        console.log('this is the end');
     }
 
     render() {

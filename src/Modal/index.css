@@ -3,6 +3,7 @@
     z-index: 1;
     border: 1px solid #ccc;
     background: white;
+    padding: 20px;  
   }
   .flexible-modal-mask {
     position: fixed;
@@ -22,15 +23,35 @@
     border-right: solid 2px #333;
   }
   .flexible-modal-drag-area{
-    background: rgba(22, 22, 333, 0.2);
+    background: #00bbff;
     height: 50px;
     position:absolute;
     right:0;
     top:0;
     cursor:move;
+    z-index: -1;
   }
 
 .button-add{
   position: absolute;
   z-index: 2;
+}
+
+.content{
+  margin-right: 10px;
+}
+
+.header{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+i.icon-close{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.body{
+  margin-top: 30px;
 }

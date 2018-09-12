@@ -1,16 +1,22 @@
 import request from '../../helpers/axios'
 
-const login = (data) => {
+const login = async (userData) => {
     return new Promise((resolve, reject) => {
         request
-            .post('/login', data)
+            .post('/login', userData)
             .then(response => {
                 resolve(response)
             })
             .catch(error => {
-                reject(error.response.data.error)
+                reject(error.response)
             })
     })
+        .then(response => {
+            return (response);
+        })
+        .catch(response => {
+            return (response)
+        })
 }
 
 export default login

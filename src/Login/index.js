@@ -31,16 +31,18 @@ export default class MyLoginForm extends React.Component {
         }
 
         const response = await login(data)
+        console.log(response);
 
-        if (response.request.status === 200) {
+        if (response.request.status === 400) {
             this.setState({
-                message: 'Login successful'
+                message: response.data.error
             })
-        } else {
+        } else if (response.request.status === 200) {
             this.setState({
-                message: 'Login failed'
+                message: 'Login successful!'
             })
         }
+        console.log('this is the end');
     }
 
     render() {

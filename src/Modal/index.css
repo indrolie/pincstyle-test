@@ -32,9 +32,12 @@
     z-index: -1;
   }
 
-.button-add{
-  position: absolute;
+.ui.button-add{
+  margin: auto;
+  border-radius: 3px;
+  position: relative;
   z-index: 2;
+  margin-top: 30px;
 }
 
 .content{
@@ -46,10 +49,8 @@
   font-weight: bold;
 }
 
-i.icon-close{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+.icon-close{
+  cursor: pointer;
 }
 
 .body{

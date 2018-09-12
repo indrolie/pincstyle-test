@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactModal from 'react-modal-resizable-draggable'
-import { Icon, Grid } from 'semantic-ui-react'
+import { Icon, Grid, Button } from 'semantic-ui-react'
 
 import './index.css';
 
@@ -36,9 +36,9 @@ export default class MyModal extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.addModal} className='button-add'>
+                <Button onClick={this.addModal} className='button-add'>
                     Add modal
-                </button>
+                </Button>
                 {this.state.modals.map((modal, index) => {
                     return (
                         <ReactModal key={index} initWidth={400} initHeight={200} isOpen={true}>

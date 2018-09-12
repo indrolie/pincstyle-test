@@ -10,13 +10,15 @@ import './index.css';
 class App extends Component {
   render() {
     const panes = [
-      { menuItem: 'Test A', render: () => <Tab.Pane><MyModal /></Tab.Pane> },
-      { menuItem: 'Test B', render: () => <Tab.Pane><MyLoginForm /></Tab.Pane> },
-      { menuItem: 'Test C', render: () => <Tab.Pane><ShowUsers /></Tab.Pane> },
+      { menuItem: 'Test A', render: () => <Tab.Pane className='pane' ><MyModal /></Tab.Pane> },
+      { menuItem: 'Test B', render: () => <Tab.Pane className='pane' ><MyLoginForm /></Tab.Pane> },
+      { menuItem: 'Test C', render: () => <Tab.Pane className='pane' ><ShowUsers /></Tab.Pane> },
     ]
 
     return (
-      <Tab panes={panes} />
+      <div className='container'>
+        <Tab panes={panes} className='panes'/>
+      </div>
     );
   }
 }
